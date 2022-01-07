@@ -21,4 +21,12 @@ public class Web3Wallet
         EthECKey key = new EthECKey(_privateKey);
         return key.GetPublicAddress();
     }
+
+    public static string Sign(string _privateKey, string _message)
+    {
+        var signer = new EthereumMessageSigner();
+        EthECKey key = new EthECKey(_privateKey);
+        string signature = signer.EncodeUTF8AndSign(_message, new EthECKey(_privateKey));
+        return signature;
+    }
 }
