@@ -710,8 +710,8 @@ MonoBehaviour:
     Connect to your
     social media account
 
-    Player Settings > Supported URL schemes > Element 1:
-    unitydl'
+    iOS > Player Settings > Supported URL schemes > Element
+    0: unitydl'
 --- !u!222 &1469866701
 CanvasRenderer:
   m_ObjectHideFlags: 0
