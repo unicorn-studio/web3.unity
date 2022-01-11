@@ -6,7 +6,7 @@ public class WalletSignMessageExample : MonoBehaviour
 {
     void Start()
     {
-        string privateKey = "0x78dae1a22c7507a4ed30c06172e7614eb168d3546c13856340771e63ad3c0081";
+        string privateKey = "0x78dae1a22c7507a4ed30c06172e7614eb168d3546c13856340771e63ad3c0081"; // Web3Wallet.PrivateKey
         string message = "hello";
         string response = Web3Wallet.Sign(privateKey, message);
         print(response);

@@ -8,7 +8,7 @@ public class WalletSend721Example : MonoBehaviour
     async public void OnSend721()
     {
         // private key of account
-        string privateKey = "0x78dae1a22c7507a4ed30c06172e7614eb168d3546c13856340771e63ad3c0081";
+        string privateKey = "0x78dae1a22c7507a4ed30c06172e7614eb168d3546c13856340771e63ad3c0081"; // Web3Wallet.PrivateKey
         // set chain: ethereum, moonbeam, polygon etc
         string chain = "ethereum";
         // set network mainnet, testnet
@@ -40,5 +40,6 @@ public class WalletSend721Example : MonoBehaviour
         string signature = Web3Wallet.SignTransaction(privateKey, transaction, chainId);
         string response = await EVM.BroadcastTransaction(chain, network, account, contract, value, data, signature, gasPrice, gasLimit, rpc);
         print(response);
+        Application.OpenURL("https://rinkeby.etherscan.io/tx/" + response);
     }
 }
